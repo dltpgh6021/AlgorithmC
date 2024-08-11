@@ -10,8 +10,8 @@ int main(void) {
 	dp[0] = 1;
 	for(int i = 1; i <= n; i++) {
 		dp[i] = 0;
-		for(int j = 0; j < n; i++) {
-			dp[i] += dp[j] * dp[n - 1 - j];
+		for(int j = 0; j < i; j++) {
+			dp[i] += dp[j] * dp[i - 1 - j];
 		}
 	}
 	
